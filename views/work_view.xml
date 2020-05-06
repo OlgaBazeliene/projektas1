@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <record model="ir.ui.view" id="work_view">
+        <field name="name">view.name</field>
+        <field name="model">projektas1.work</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Project Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="projektas_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-    <record model="ir.actions.act_window" id="works_action">
+    <record model="ir.ui.view" id="work_tree_view">
+        <field name="name">projektas.form</field>
+        <field name="model">projektas1.work</field>
+        <field name="arch" type="xml">
+            <tree string="Project Tree">
+                <field name="name"/>
+                <field name="projektas_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="work_action">
         <field name="name">Works</field>
         <field name="res_model">projektas1.work</field>
         <field name="view_mode">tree,form</field>
     </record>
 
 
-    <menuitem id="works_action_menu" name="Works" parent="project_menu"
-              action="works_action"/>
+    <menuitem id="project_work_menu" name="Darbai" parent="project_menu"
+              action="work_action"/>
 </odoo>

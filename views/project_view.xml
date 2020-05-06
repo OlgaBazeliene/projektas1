@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <record model="ir.ui.view" id="projektai_view">
+        <field name="name">view.name</field>
+        <field name="model">projektas1.project</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Project Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="client_id"/>
+                        <field name="vadovas_id"/>
+
+                    </group>
+                    <notebook>
+                        <page string="Darbuotojai">
+                            <field name="employees_ids">
+                                <tree string="Employees">
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                    <page string="Darbai">
+                            <field name="works_ids">
+                                <tree string="Works">
+                                    <field name="name"/>
+                                </tree>
+                                <form string="Works">
+                                    <group>
+                                        <field name="name"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="projektai_tree_view">
+        <field name="name">projektas.form</field>
+        <field name="model">projektas1.project</field>
+        <field name="arch" type="xml">
+            <tree string="Project Tree">
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+            </tree>
+        </field>
+    </record>
 
     <record model="ir.actions.act_window" id="project_action">
         <field name="name">Projects</field>
@@ -7,9 +61,9 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="main_project_menu" name="My Projects"/>
-    <menuitem id="project_menu" name="Project 1"
+    <menuitem id="main_project_menu" name="Mano Projektai"/>
+    <menuitem id="project_menu" name="Projektų modulis"
               parent="main_project_menu"/>
-    <menuitem id="project_action_menu" name="Project 1" parent="project_menu"
+    <menuitem id="project_action_menu" name="Projektai" parent="project_menu"
               action="project_action"/>
 </odoo>

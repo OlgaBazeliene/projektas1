@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="bill_view">
+        <field name="name">bill.name</field>
+        <field name="model">projektas1.bill</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Bill Form">
+                <sheet>
+                    <group>
+                        <field name="number"/>
+                        <field name="client_id"/>
+                        <field name="projektas_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="work_tree_view">
+        <field name="name">bill.form</field>
+        <field name="model">projektas1.bill</field>
+        <field name="arch" type="xml">
+            <tree string="Project Tree">
+                <field name="number"/>
+                <field name="client_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="bill_action">
+        <field name="name">Bill</field>
+        <field name="res_model">projektas1.bill</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="project_bill_menu" name="Sąskaitos" parent="project_menu"
+              action="bill_action"/>
+</odoo>
