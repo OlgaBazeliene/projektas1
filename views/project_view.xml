@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record model="ir.actions.act_window" id="project_action">
+        <field name="name">Projects</field>
+        <field name="res_model">projektas1.project</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="main_project_menu" name="My Projects"/>
+    <menuitem id="project_menu" name="Project 1"
+              parent="main_project_menu"/>
+    <menuitem id="project_action_menu" name="Project 1" parent="project_menu"
+              action="project_action"/>
+</odoo>
