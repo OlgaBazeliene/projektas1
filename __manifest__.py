@@ -26,6 +26,8 @@
         'views/project_view.xml',
         'views/work_view.xml',
         'views/bill_view.xml',
+        'views/parner_inherited_view.xml',
+        'views/employee_inherited_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

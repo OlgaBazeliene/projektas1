@@ -62,7 +62,7 @@
     </record>
 
     <menuitem id="main_project_menu" name="Mano Projektai"/>
-    <menuitem id="project_menu" name="Projektų modulis"
+    <menuitem id="project_menu" name="Projects"
               parent="main_project_menu"/>
     <menuitem id="project_action_menu" name="Projektai" parent="project_menu"
               action="project_action"/>
