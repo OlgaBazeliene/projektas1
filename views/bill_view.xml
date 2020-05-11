@@ -35,6 +35,6 @@
     </record>
 
 
-    <menuitem id="project_bill_menu" name="Sąskaitos" parent="project_menu"
+    <menuitem id="project_bill_menu" name="Bills" parent="project_menu"
               action="bill_action"/>
 </odoo>

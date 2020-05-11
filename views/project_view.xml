@@ -16,14 +16,14 @@
 
                     </group>
                     <notebook>
-                        <page string="Darbuotojai">
+                        <page string="Employees">
                             <field name="employees_ids">
                                 <tree string="Employees">
                                     <field name="name"/>
                                 </tree>
                             </field>
                         </page>
-                    <page string="Darbai">
+                    <page string="Works">
                             <field name="works_ids">
                                 <tree string="Works">
                                     <field name="name"/>
@@ -61,9 +61,9 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="main_project_menu" name="Mano Projektai"/>
+    <menuitem id="main_project_menu" name="My Project"/>
     <menuitem id="project_menu" name="Projects"
               parent="main_project_menu"/>
-    <menuitem id="project_action_menu" name="Projektai" parent="project_menu"
+    <menuitem id="project_action_menu" name="Projects" parent="project_menu"
               action="project_action"/>
 </odoo>

@@ -34,6 +34,6 @@
     </record>
 
 
-    <menuitem id="project_work_menu" name="Darbai" parent="project_menu"
+    <menuitem id="project_work_menu" name="Works" parent="project_menu"
               action="work_action"/>
 </odoo>
